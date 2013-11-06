@@ -1,0 +1,16 @@
+extends layout
+block content
+-	if(!user){
+		div.hero-unit
+			h1 Welcome to Microblog
+			p Microblog is built on node.js
+			p
+				div
+					a(class="btn btn-primary btn-large",href="/login") login
+				div
+					a(class="btn btn-large",href="/reg") register now
+-	} else{
+		include say
+-	}
+		include posts
+
