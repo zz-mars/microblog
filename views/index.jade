@@ -1,5 +1,24 @@
 extends layout
 block content
+	.hero-unit
+		h1 Welcome to Microblog
+		p Microblog is built on Node.js
+		p
+			div
+				a.btn.btn-primary.btn-large(href="/login") login
+			div
+				a.btn.btn-large(href="/reg") register now
+	.row
+		.span4
+			h2 zz says
+			p What the fuck did you say?
+		.span4
+			h2 zz says
+			p I'm learning Node.js!
+		.span4
+			h2 zz says
+			p I feel that I love Shuyun Lee..
+//
 	if user
 		div.hero-unit
 			h1 Welcome to Microblog
@@ -10,5 +29,5 @@ block content
 					a.btn.btn-large(href="/reg") register now
 	else
 		include say
-	//	include posts
+		include posts
 
