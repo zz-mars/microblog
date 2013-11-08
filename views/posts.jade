@@ -1,15 +1,8 @@
--	posts.forEach(function(post,index){
--		if(index%3 == 0){
-			div.row
--		}
-			div.span4
-				h4
-					a(href="/u/"+post.user)= post.user
-					| say
-				p
-					small= post.time
-				p= post.post
--	})
--		if(posts.length % 3 != 0){
-			div.row
--		}
+each post,index in posts
+	div.span4
+		h4
+			a(href="/u/"+post.user)= post.user
+			| say
+		p
+			small= post.time
+		p= post.post

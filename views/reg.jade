@@ -1,14 +1,13 @@
 extends layout
 
 block content
-form.form-horizontal(method='post')
-	fieldset
-		legend user register
+	form.form-horizontal(method='post')
+		fieldset
+			legend user register
 			div.control-group
 				label.control-label(for='username') username
 				div.controls
 					input.input-xlarge(type='text',id='username',name='username')
-					p.help-block your username
 			div.control-group
 				label.control-label(for='password') password
 				div.controls

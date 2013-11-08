@@ -1,54 +1,56 @@
+!!!transitional
 html(xmlns='http://www.w3.org/1999/xhtml')
 script(src="/javascripts/jquery.js")
 script(src="/javascripts/bootstrap.js")
 head
+	meta(http-equiv='Content-Type',content='text/html;charset=utf-8')
 	title= title
-   	link(rel='stylesheet', href='/stylesheets/bootstrap.css').
+	link(rel='stylesheet', href='/stylesheets/bootstrap.css')
 	style
 		body{padding-left:10px;padding-right:10px;padding-top:10px;padding-bottom:10px}
 	link(rel='stylesheet', href='stylesheets/bootstrap-responsive.css').
-	body
-		div.navbar.navbar-fixed-top
-			div.navbar-inner
-				div.container
-					a.btn.btn-navbar(data-toggle="collapse",data-target=".nav-collapse")
-						span.icon-bar
-						span.icon-bar
-						span.icon-bar
-					a.brand(href="/") Microblog
-					div.nav-collapse
-						ul.nav
-							li.active
-								a(href="/") Home
-						-	if(!user){
-						ul.nav
-							li
-								a(href="/login") login
-							li
-								a(href="/reg") register
-						-	} else {
-						ul.nav
-							li
-								a(href="/logout") logout
-						-	}
+body
+	div.navbar.navbar-fixed-top
+		div.navbar-inner
+			div.container
+				a.btn.btn-navbar(data-toggle="collapse",data-target=".nav-collapse")
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.brand(href="/") Microblog
+				div.nav-collapse
+					ul.nav
+						li.active
+							a(href="/") Home
+					-	if(!user){
+					ul.nav
+						li
+							a(href="/login") login
+						li
+							a(href="/reg") register
+					-	} else {
+					ul.nav
+						li
+							a(href="/logout") logout
+					-	}
 
-			div#container.container
-			-	if(success){
-					div.alert.alert-success
-						= success
-			-	}
+		div#container.container
+		-	if(success){
+				div.alert.alert-success
+					= success
+		-	}
 
-			-	if(error){
-					div.alert.alert-error
-						= error
-			-	}
+		-	if(error){
+				div.alert.alert-error
+					= error
+		-	}
 
-			block content
+		block content
 
-			hr
-			footer
-				p
-					a(href="http://zz-mars.github.com") zz-mars
-					| Nov2013
+		hr
+		footer
+			p
+				a(href="http://zz-mars.github.com") zz-mars
+				| Nov2013
 
 
